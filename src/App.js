@@ -9,7 +9,7 @@ const [userEntered,setUserEntered] = useState('')
 const [countryFrom,setCountryFrom] = useState('USD')
 const [countryTo,setCountryTo] = useState('INR')
 const [convertedAmount,setConvertedAmount]=useState('')
-const [countryList,setCountryList] = useState(["USD","INR","AUD"])
+const [countryList,setCountryList] = useState(["USD","INR","AUD","JPY"])
 
 const currencyApiCall = async () => {
 
@@ -101,7 +101,7 @@ const convertAction = async () =>{
       <select value={countryTo} onChange={(e) => setCountryTo(e.target.value)}>
         {
           countryList.map((country,index) => (
-            <option key={"To_"+index} value={country}>{country}</option>
+            <option key={"To_"+index} value={country}  >{country}</option>
           ))
         }
       </select><br></br>
