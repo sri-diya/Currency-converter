@@ -72,10 +72,12 @@ const convertAction = async () =>{
 
   }
 
-  useEffect(()=>{
-    renderOptions()
-  },[])
-
+  // useEffect(()=>{
+  //   renderOptions()
+  // },[])
+useEffect(() => {
+  renderOptions()
+}, [renderOptions]);
   return (
     <div>
       <div className='container'>
